@@ -1,0 +1,17 @@
+*先新建一个spark context 
+ *lines=sc.textFile("hdfs://....");
+ *加载进来成文RDD
+ *
+ *
+ *errors=lines.filter(_.startsWith("ERROR"));
+ *Transformation转换
+ *
+ *errors.persist()
+ *缓存RDD
+ *
+ *Mysql_errors=errors.filter(_.contain("MySQL")).count;
+ * Action执行
+ * 
+ * 
+ * http_errors=errors.filter(_contain("HTTP")).count;
+ * Action执行
